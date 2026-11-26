@@ -2,8 +2,8 @@
 
 Roteiro fixo, preenchido com o brief e as fotos do projeto:
   abertura (fachada + nome, cheio já no quadro 0) → preço → um cômodo por cena
-  (cômodo interno: a foto profissional vazia e, por cortina, a versão decorada) →
-  números contando → fecho com nome, preço, local e o aviso de decoração virtual.
+  (cômodo interno: a foto profissional vazia e, por cortina, a versêo decorada) →
+  números contando → fecho com nome, preço, local e o aviso de decoraçêo virtual.
 Zoom lento (≤ 1,10), troca por dissolve, sem sons de movimento.
 """
 from __future__ import annotations
@@ -55,7 +55,7 @@ def plano(projeto: Path, com_decorada: bool = True) -> dict:
     textos = [f["texto"] for f in b["fatos"] if f["rotulo"] in ("Destaque", "Lazer")]
 
     def frase(comodo: str) -> str:
-        """Destaque que cita este cômodo; se não houver, um destaque que não cita cômodo nenhum."""
+        """Destaque que cita este cômodo; se nêo houver, um destaque que nêo cita cômodo nenhum."""
         chaves = dict(COMODOS).get(comodo, [])
         for t in textos:
             if any(k in t.lower() for k in chaves):
@@ -103,7 +103,7 @@ def _img(src: str, cls: str = "ph") -> str:
 
 
 def _cena_html(c: dict, i: int, b: dict, assets: dict) -> tuple[str, str]:
-    """Devolve (html, js). js recebe tl (timeline da cena), q (seletor dentro da cena) e D (duração)."""
+    """Devolve (html, js). js recebe tl (timeline da cena), q (seletor dentro da cena) e D (duraçêo)."""
     foto = assets[str(c["foto"])]
     tipo = c["tipo"]
     kb = "tl.fromTo(q('.ph'),{scale:1.0},{scale:1.08,duration:D,ease:'none'},0);"
@@ -127,7 +127,7 @@ def _cena_html(c: dict, i: int, b: dict, assets: dict) -> tuple[str, str]:
         js = kb
         if tipo == "antes-depois":
             deco = (f'<div class="deco">{_img(assets[str(c["deco"])], "ph2")}</div><div class="linha"></div>'
-                    '<div class="etq antes">COMO ESTÁ</div><div class="etq depois">DECORAÇÃO VIRTUAL</div>')
+                    '<div class="etq antes">COMO ESTÁ</div><div class="etq depois">DECORAÇêO VIRTUAL</div>')
             js += ("tl.fromTo(q('.ph2'),{scale:1.0},{scale:1.08,duration:D,ease:'none'},0);"
                    "tl.fromTo(q('.deco'),{clipPath:'inset(0 0 0 100%)'},{clipPath:'inset(0 0 0 0%)',duration:1.3,ease:'power2.inOut'},1.3);"
                    "tl.fromTo(q('.linha'),{left:'100%',opacity:1},{left:'0%',duration:1.3,ease:'power2.inOut'},1.3);"
@@ -150,7 +150,7 @@ def _cena_html(c: dict, i: int, b: dict, assets: dict) -> tuple[str, str]:
               "tl.to(o,{x:v,duration:1.1,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(o.x).toLocaleString('pt-BR');}},.3+k*.18);});")
         return h, js
     # fecho
-    aviso = '<p class="aviso">Imagens tratadas por IA · cômodos com decoração virtual</p>' if c.get("aviso") else ""
+    aviso = '<p class="aviso">Imagens tratadas por IA · cômodos com decoraçêo virtual</p>' if c.get("aviso") else ""
     contato = f'<p class="contato">{esc(b["contato"])}</p>' if b.get("contato") else ""
     h = (_img(foto, "ph borrada") + '<div class="veu"></div><div class="bloco fim">'
          f'<h2 class="nome">{nome_html(b.get("nome"))}</h2><p class="local">{esc(b.get("local"))}</p>'

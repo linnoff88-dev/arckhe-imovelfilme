@@ -2,7 +2,7 @@
   "name": "imovelfilme",
   "version": "1.0.0",
   "private": true,
-  "description": "Do link do anúncio ao filme do imóvel: fotos profissionais, decoração virtual e vídeo motion em HyperFrames.",
+  "description": "Do link do anúncio ao filme do imóvel: fotos profissionais, decoraçêo virtual e vídeo motion em HyperFrames.",
   "license": "MIT",
   "dependencies": {
     "gsap": "^3.15.0",

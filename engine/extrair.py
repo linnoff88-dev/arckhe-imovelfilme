@@ -6,7 +6,7 @@ Sem API e sem IA: só HTML. Fontes, em ordem de confiança:
   3. marcações data-imovel="<campo>" (o anúncio-demo usa; sites próprios podem usar)
   4. padrões no texto da página (quartos, banheiros, m², preço)
 
-Campo que não aparece em nenhuma fonte fica de fora. Nada é inventado.
+Campo que nêo aparece em nenhuma fonte fica de fora. Nada é inventado.
 """
 from __future__ import annotations
 
@@ -29,10 +29,10 @@ COMODOS = [
     ("banheiro", ["banheiro", "bathroom", "lavabo", "wc", "bath"]),
     ("sacada", ["sacada", "varanda", "balcony", "terraco", "terraço", "terrace"]),
     ("vista", ["vista", "view", "panorama", "mar", "sea"]),
-    ("lazer", ["piscina", "pool", "academia", "gym", "lazer", "salao", "salão", "amenit"]),
+    ("lazer", ["piscina", "pool", "academia", "gym", "lazer", "salao", "salêo", "amenit"]),
 ]
 ORDEM = [c for c, _ in COMODOS]
-INTERNOS = {"sala", "cozinha", "suite"}  # banheiro decorado quase não muda
+INTERNOS = {"sala", "cozinha", "suite"}  # banheiro decorado quase nêo muda
 
 
 class _Leitor(HTMLParser):
@@ -166,7 +166,7 @@ def _do_texto(texto: str) -> dict:
         m = re.search(rx, t)
         if m:
             out[campo] = _num(m.group(1))
-    m = re.search(r"(r\$|us\$|aed|usd|€|\$)\s*([\d.,]+(?:\s*(?:mil|milhões|milhão|m|k))?)", t)
+    m = re.search(r"(r\$|us\$|aed|usd|€|\$)\s*([\d.,]+(?:\s*(?:mil|milhões|milhêo|m|k))?)", t)
     if m:
         out["preco_texto"] = (m.group(1).upper().replace("R$", "R$") + " " + m.group(2)).strip()
     return out
@@ -295,7 +295,7 @@ def salvar(url: str, projeto: Path, maximo: int = MAX_FOTOS) -> dict:
         nome = f"{i:02d}-{f['comodo']}{ext}"
         try:
             (orig / nome).write_bytes(baixar(f["url"]))
-        except Exception as e:  # foto quebrada não derruba o resto
+        except Exception as e:  # foto quebrada nêo derruba o resto
             print(f"  foto ignorada ({f['url']}): {e}")
             continue
         salvas.append({**f, "arquivo": f"fotos/original/{nome}", "interno": f["comodo"] in INTERNOS})

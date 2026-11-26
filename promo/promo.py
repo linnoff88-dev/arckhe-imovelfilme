@@ -89,9 +89,9 @@ def cenas(a: dict, b: dict) -> list[dict]:
          "js": kb + wipe + "tl.from(q('.legenda'),{opacity:0,y:24,duration:.6},.3);"},
         {"dur": 6.0, "html":
             f'<img class="ph" src="{a["suite_pro"]}" alt=""><div class="deco"><img class="ph2" src="{a["suite_deco"]}" alt=""></div>'
-            '<div class="linha"></div><div class="etq antes">VAZIO</div><div class="etq depois">DECORAÇÃO VIRTUAL</div>'
+            '<div class="linha"></div><div class="etq antes">VAZIO</div><div class="etq depois">DECORAÇêO VIRTUAL</div>'
             '<div class="scrim baixo"></div><div class="bloco legenda"><div class="rot">PASSO 4 · VOCÊ ESCOLHE O ESTILO</div>'
-            '<div class="frase">Móveis mudam. Parede, janela e vista, não.</div></div>',
+            '<div class="frase">Móveis mudam. Parede, janela e vista, nêo.</div></div>',
          "js": kb + wipe + "tl.from(q('.legenda'),{opacity:0,y:24,duration:.6},.3);"},
         {"dur": 12.0, "video": a["filme"], "html": '<div class="tag">PASSO 5 · O FILME SAI PRONTO</div>',
          "js": "tl.from(q('.tag'),{opacity:0,y:-16,duration:.5},.4);tl.to(q('.tag'),{opacity:0,duration:.4},4.2);"},
@@ -110,7 +110,7 @@ def composicao(lista: list[dict]) -> tuple[str, float]:
     for i, c in enumerate(lista):
         ini = round(t, 3)
         cid = f"p{i}"
-        if c.get("video"):  # vídeo com tempo próprio, fora de qualquer seção temporizada
+        if c.get("video"):  # vídeo com tempo próprio, fora de qualquer seçêo temporizada
             htmls.append(f'<video id="filme" class="clip" src="{c["video"]}" muted playsinline data-start="{ini:.3f}" '
                          f'data-duration="{c["dur"]:.3f}" data-track-index="3" style="z-index:{i + 1}"></video>')
             jss.append(f"main.fromTo('#filme',{{opacity:0}},{{opacity:1,duration:{XF},ease:'none'}},{ini:.3f});")

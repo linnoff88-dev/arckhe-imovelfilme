@@ -1,6 +1,6 @@
 """Etapa 5: brief do vídeo — os 4 a 8 fatos mais fortes do anúncio, prontos para virar texto animado.
 
-Determinístico: lê imovel/anuncio.json e escolhe por prioridade. Campo ausente não entra.
+Determinístico: lê imovel/anuncio.json e escolhe por prioridade. Campo ausente nêo entra.
 Saída: imovel/brief.json (lido pelo vídeo) e imovel/brief.md (para a pessoa revisar e editar).
 """
 from __future__ import annotations
@@ -65,6 +65,6 @@ def salvar(projeto: Path) -> dict:
     if b["preco"]:
         linhas += [f"PREÇO\n{b['preco']}", ""]
     linhas += ["FATOS"] + [f"- {f['texto']}" for f in b["fatos"]]
-    linhas += ["", "Edite imovel/brief.json para mudar o que aparece no vídeo. Só entram dados que estão no anúncio."]
+    linhas += ["", "Edite imovel/brief.json para mudar o que aparece no vídeo. Só entram dados que estêo no anúncio."]
     (projeto / "imovel" / "brief.md").write_text("\n".join(linhas) + "\n")
     return b

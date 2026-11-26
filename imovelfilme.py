@@ -3,10 +3,10 @@
 
   python3 imovelfilme.py tudo <url> --projeto <pasta> [--estilo praia-contemporaneo] [--trilha musica.wav]
   python3 imovelfilme.py extrair <url> --projeto <pasta>      # dados + até 10 fotos
-  python3 imovelfilme.py fotos --projeto <pasta> --estilo X    # foto profissional + decoração virtual (Codex)
+  python3 imovelfilme.py fotos --projeto <pasta> --estilo X    # foto profissional + decoraçêo virtual (Codex)
   python3 imovelfilme.py brief --projeto <pasta>               # 4 a 8 fatos para o vídeo
   python3 imovelfilme.py video --projeto <pasta> [--trilha X] [--formato 16x9|9x16]
-  python3 imovelfilme.py estilos                               # estilos de decoração prontos
+  python3 imovelfilme.py estilos                               # estilos de decoraçêo prontos
 """
 from __future__ import annotations
 
@@ -35,7 +35,7 @@ def main(argv=None):
             continue
         s.add_argument("--projeto", required=True, type=Path, help="pasta do projeto do imóvel")
         s.add_argument("--max-fotos", type=int, default=extrair.MAX_FOTOS)
-        s.add_argument("--estilo", default="praia-contemporaneo", help="nome da lista (estilos) ou descrição livre")
+        s.add_argument("--estilo", default="praia-contemporaneo", help="nome da lista (estilos) ou descriçêo livre")
         s.add_argument("--trilha", type=Path, help="música de fundo (wav/mp3)")
         s.add_argument("--formato", default="16x9", choices=list(video.FORMATOS))
         s.add_argument("--sem-decorada", action="store_true", help="vídeo só com as fotos profissionais")

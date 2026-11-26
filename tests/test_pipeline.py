@@ -95,7 +95,7 @@ class TestPlano(unittest.TestCase):
         pl = video.plano(self.tmp)
         h = video.composicao(pl, {str(c[k]): "x.jpg" for c in pl["cenas"] for k in ("foto", "deco") if c.get(k)})
         self.assertIn('window.__timelines["main"]', h)
-        self.assertIn("DECORAÇÃO VIRTUAL", h)
+        self.assertIn("DECORAÇêO VIRTUAL", h)
         self.assertNotIn("Math.random", h)
         self.assertEqual(h.count('class="clip cena"'), len(pl["cenas"]))
 

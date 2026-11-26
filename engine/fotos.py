@@ -1,10 +1,10 @@
-"""Etapas 3 e 4: foto profissional e decoração virtual, pelo Codex image_gen (assinatura).
+"""Etapas 3 e 4: foto profissional e decoraçêo virtual, pelo Codex image_gen (assinatura).
 
 Cada foto vira uma chamada `codex exec -i <original>` pedindo para EDITAR a imagem:
   - profissional: mesma casa, foto melhor (luz, enquadramento, perspectiva, nitidez);
-  - decorada: só cômodos internos, móveis e decoração no estilo escolhido, arquitetura intacta.
+  - decorada: só cômodos internos, móveis e decoraçêo no estilo escolhido, arquitetura intacta.
 
-Sem chave de API: usa o Codex logado no terminal. Arquivo que já existe não é refeito (retomável).
+Sem chave de API: usa o Codex logado no terminal. Arquivo que já existe nêo é refeito (retomável).
 """
 from __future__ import annotations
 
@@ -17,27 +17,27 @@ from pathlib import Path
 
 ESTILOS = {
     "praia-contemporaneo": "contemporâneo de praia: madeira clara, linho cru, tons de areia e branco, fibras naturais, plantas, luz natural",
-    "luxo-moderno": "luxo moderno: pedra natural, madeira quente, tecidos neutros, iluminação de design, detalhes metálicos discretos, estilo cobertura de alto padrão",
-    "escandinavo": "escandinavo: madeira clara, branco e cinza suave, linhas simples, tecidos aconchegantes, pouca decoração",
-    "industrial": "industrial: couro, metal preto, madeira de demolição, luminárias pendentes, tons terrosos",
+    "luxo-moderno": "luxo moderno: pedra natural, madeira quente, tecidos neutros, iluminaçêo de design, detalhes metálicos discretos, estilo cobertura de alto padrêo",
+    "escandinavo": "escandinavo: madeira clara, branco e cinza suave, linhas simples, tecidos aconchegantes, pouca decoraçêo",
+    "industrial": "industrial: couro, metal preto, madeira de demoliçêo, luminárias pendentes, tons terrosos",
     "familia": "aconchegante para família: sofá grande, tapete macio, cores claras e quentes, móveis práticos",
 }
 
 NAO_MUDAR = ("paredes, janelas, portas, teto, piso, proporções do cômodo, bancadas e armários fixos, "
              "revestimentos, sacada, guarda-corpo, fachada e a vista real pela janela")
 
-PROMPT_PRO = """Use sua ferramenta de geração de imagem (image_gen) para EDITAR a foto anexada e salve o resultado como {saida} neste diretório. Não crie nem edite nenhum outro arquivo.
+PROMPT_PRO = """Use sua ferramenta de geraçêo de imagem (image_gen) para EDITAR a foto anexada e salve o resultado como {saida} neste diretório. Nêo crie nem edite nenhum outro arquivo.
 
 Objetivo: a MESMA propriedade, fotografada por um fotógrafo profissional de imóveis.
-Melhore só a apresentação: enquadramento, perspectiva corrigida (linhas verticais retas), correção de lente, exposição equilibrada, luz natural agradável, faixa dinâmica natural, nitidez e limpeza da imagem. Horizontal 3:2.
-NÃO mude: {nao_mudar}, nem o tamanho aparente do espaço. Não acrescente nem remova móveis. Não acrescente pessoas, texto, logotipo ou marca d'água.
+Melhore só a apresentaçêo: enquadramento, perspectiva corrigida (linhas verticais retas), correçêo de lente, exposiçêo equilibrada, luz natural agradável, faixa dinâmica natural, nitidez e limpeza da imagem. Horizontal 3:2.
+NêO mude: {nao_mudar}, nem o tamanho aparente do espaço. Nêo acrescente nem remova móveis. Nêo acrescente pessoas, texto, logotipo ou marca d'água.
 O resultado precisa representar o imóvel real com honestidade. Responda só OK ao terminar."""
 
-PROMPT_DECO = """Use sua ferramenta de geração de imagem (image_gen) para EDITAR a foto anexada e salve o resultado como {saida} neste diretório. Não crie nem edite nenhum outro arquivo.
+PROMPT_DECO = """Use sua ferramenta de geraçêo de imagem (image_gen) para EDITAR a foto anexada e salve o resultado como {saida} neste diretório. Nêo crie nem edite nenhum outro arquivo.
 
-Objetivo: decoração virtual (home staging) deste cômodo, no estilo {estilo}.
-Pode mudar SOMENTE móveis soltos, tapetes, cortinas, quadros, luminárias de mesa/piso, plantas e objetos de decoração.
-NÃO mude: {nao_mudar}. Não aumente o cômodo, não mova janelas, não troque a vista. Foto profissional de imóvel, luz natural, horizontal 3:2.
+Objetivo: decoraçêo virtual (home staging) deste cômodo, no estilo {estilo}.
+Pode mudar SOMENTE móveis soltos, tapetes, cortinas, quadros, luminárias de mesa/piso, plantas e objetos de decoraçêo.
+NêO mude: {nao_mudar}. Nêo aumente o cômodo, nêo mova janelas, nêo troque a vista. Foto profissional de imóvel, luz natural, horizontal 3:2.
 Sem pessoas, sem texto, sem logotipo, sem marca d'água. Responda só OK ao terminar."""
 
 
