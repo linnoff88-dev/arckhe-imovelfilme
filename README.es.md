@@ -1,6 +1,6 @@
 # 🏠 imovelfilme
 
-[![Tu anuncio se vuelve película](guia/assets/banner-es.jpg)](https://inematds.github.io/imovelfilme/guia/es/)
+[![Tu anuncio se vuelve película](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/es/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -10,7 +10,7 @@ imovelfilme es una herramienta gratuita que convierte el anuncio de un inmueble 
 
 ## 📖 Guía de uso
 
-Guía completa (landing + paso a paso + video): **https://inematds.github.io/imovelfilme/guia/es/**
+Guía completa (landing + paso a paso + video): **https://linnoff88-dev.github.io/arckhe-/guia/es/**
 
 ## Cómo funciona
 
@@ -26,7 +26,7 @@ enlace del anuncio → datos verificados → hasta 10 fotos → foto profesional
 ## Uso
 
 ```bash
-git clone https://github.com/inematds/imovelfilme && cd imovelfilme
+git clone https://github.com/linnoff88-dev/imovelfilme && cd imovelfilme
 npm i
 python3 imovelfilme.py estilos
 python3 imovelfilme.py tudo "https://seusite.com.br/imoveis/apto-1202" --projeto ~/imoveis/apto1202 \
@@ -74,4 +74,4 @@ MIT. Fuentes Sora e Inter: SIL OFL 1.1. Pistas en `assets/trilhas/`: generadas l
 
 ---
 
-[INEMA.CLUB](https://inema.club)
+[ARCKHÉ AI](https://ARCKHÉ AI)

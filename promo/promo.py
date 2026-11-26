@@ -99,7 +99,7 @@ def cenas(a: dict, b: dict) -> list[dict]:
             '<div class="fim2"><div class="marca">imovel<b>filme</b></div>'
             '<div class="sub">Do link do anúncio ao filme do imóvel</div>'
             '<div class="sub" style="font-size:calc(38*var(--u));color:#b4b4be">grátis · código aberto · roda com a sua assinatura</div>'
-            '<div class="repo">github.com/inematds/imovelfilme</div><div class="pill">INEMA.CLUB</div></div>',
+            '<div class="repo">github.com/linnoff88-dev/imovelfilme</div><div class="pill">ARCKHÉ AI</div></div>',
          "js": "qa('.fim2 > *').forEach(function(el,k){tl.from(el,{opacity:0,y:24,duration:.55,ease:'power2.out'},.3+k*.25);});"},
     ]
 

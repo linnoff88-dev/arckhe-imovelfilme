@@ -6,7 +6,7 @@
 </div>
 
 
-[![Seu anêÂºncio vira filme](guia/assets/banner.jpg)](https://inematds.github.io/imovelfilme/guia/)
+[![Seu anêÂºncio vira filme](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/)
 
 **ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
@@ -16,7 +16,7 @@ O imovelfilme êÂ© uma ferramenta gratuita que transforma o anêÂºncio d
 
 ## ê°Å¸ââ Guia de uso
 
-Guia completo (landing + passo a passo + vêÂ­deo): **https://inematds.github.io/imovelfilme/guia/**
+Guia completo (landing + passo a passo + vêÂ­deo): **https://linnoff88-dev.github.io/arckhe-/guia/**
 
 ## Como funciona
 
@@ -32,7 +32,7 @@ link do anêÂºncio ê¢â â dados verificados ê¢â â atê�
 ## Uso
 
 ```bash
-git clone https://github.com/inematds/imovelfilme && cd imovelfilme
+git clone https://github.com/linnoff88-dev/imovelfilme && cd imovelfilme
 npm i
 python3 imovelfilme.py estilos
 python3 imovelfilme.py tudo "https://seusite.com.br/imoveis/apto-1202" --projeto ~/imoveis/apto1202 \
@@ -80,7 +80,7 @@ MIT. Fontes Sora e Inter: SIL OFL 1.1. Trilhas em `assets/trilhas/`: geradas loc
 
 ---
 
-[INEMA.CLUB](https://inema.club)
+[ARCKHÉ AI](https://ARCKHÉ AI)
 
 ---
 

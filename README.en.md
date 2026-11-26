@@ -1,6 +1,6 @@
 # 🏠 imovelfilme
 
-[![Your listing becomes a film](guia/assets/banner-en.jpg)](https://inematds.github.io/imovelfilme/guia/en/)
+[![Your listing becomes a film](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/en/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -10,7 +10,7 @@ imovelfilme is a free tool that turns a property listing into a short promo vide
 
 ## 📖 User guide
 
-Full guide (landing + step by step + video): **https://inematds.github.io/imovelfilme/guia/en/**
+Full guide (landing + step by step + video): **https://linnoff88-dev.github.io/arckhe-/guia/en/**
 
 ## How it works
 
@@ -26,7 +26,7 @@ listing link → verified data → up to 10 photos → professional photo → vi
 ## Usage
 
 ```bash
-git clone https://github.com/inematds/imovelfilme && cd imovelfilme
+git clone https://github.com/linnoff88-dev/imovelfilme && cd imovelfilme
 npm i
 python3 imovelfilme.py estilos
 python3 imovelfilme.py tudo "https://seusite.com.br/imoveis/apto-1202" --projeto ~/imoveis/apto1202 \
@@ -74,4 +74,4 @@ MIT. Sora and Inter fonts: SIL OFL 1.1. Tracks in `assets/trilhas/`: generated l
 
 ---
 
-[INEMA.CLUB](https://inema.club)
+[ARCKHÉ AI](https://ARCKHÉ AI)

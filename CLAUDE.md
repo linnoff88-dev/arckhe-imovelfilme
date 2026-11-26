@@ -6,7 +6,7 @@ Do link do anúncio ao filme do imóvel. Python (`imovelfilme.py`, `engine/`) + 
 - Imagens só pelo Codex logado (assinatura); nenhuma API paga.
 - Demo: `samples/anuncio-demo` (fictício). `projetos/` é saída local e fica fora do git.
 - Promo: `python3 promo/promo.py` (precisa de `projetos/demo` pronto).
-- Autor dos commits: `inematds <inematds@gmail.com>`.
+- Autor dos commits: `linnoff88-dev <linnoff88-dev@gmail.com>`.
 
 ## Self-learning
 

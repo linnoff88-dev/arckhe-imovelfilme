@@ -5,7 +5,7 @@ description: "Link de anúncio de imóvel vira filme de divulgaçêo: lê os dad
 
 # imovelfilme
 
-Do link do anúncio ao filme do imóvel. Repositório: https://github.com/inematds/imovelfilme
+Do link do anúncio ao filme do imóvel. Repositório: https://github.com/linnoff88-dev/imovelfilme
 
 ## Antes de começar
 
